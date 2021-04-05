@@ -1,6 +1,23 @@
 @import "../../App.scss";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Open+Sans&family=Oswald:wght@300&family=Playfair+Display&display=swap");
 
+@mixin htext {
+    background-color: black;
+    padding: 80px;
+    h3 {
+        font-family: "Oswald", sans-serif;
+        color: #ffffff;
+        font-size: 40px;
+        letter-spacing: 2px;
+    }
+    p {
+        margin: 0;
+        font-size: 25px;
+        color: #ffffff;
+        font-family: "Open Sans", sans-serif;
+    }
+}
+
 #Home {
     video {
         position: absolute;
@@ -13,17 +30,17 @@
         text-align: center;
         height: 100px;
         width: 100%;
+        h1 {
+            margin-top: 30px;
+            color: #f7ea00;
+            font-size: 30px;
+            font-family: "Playfair Display", serif;
+            letter-spacing: 3px;
+        }
     }
     .dark {
         background-color: black;
-        height:100px;
-    }
-    h1 {
-        margin-top: 30px;
-        color: #f7ea00;
-        font-size: 30px;
-        font-family: "Playfair Display", serif;
-        letter-spacing: 3px;
+        height: 100px;
     }
     .section1 {
         height: 720px;
@@ -38,8 +55,6 @@
                 color: #ffffff;
             }
             h4 {
-                animation-name: intro;
-                animation-duration: 1s;
                 font-family: "Open Sans", sans-serif;
                 letter-spacing: 2px;
                 font-size: 20px;
@@ -49,28 +64,68 @@
             padding-left: 20px;
             color: white;
         }
-        background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
+        background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
     }
     .section2 {
         height: 300px;
-        background-color: black;
-        padding: 20px;
         text-align: center;
+        @include htext();
+    }
+    .section3 {
+        @include htext();
+        text-align: left;
+        .Ven {
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: center;
+        }
         h3 {
-            font-family: "Oswald", sans-serif;
-            color: #ffffff;
-            font-size: 30px;
-            letter-spacing: 2px;
+            margin: auto auto 0 auto;
         }
         p {
-            margin: 0;
-            padding: 0 80px;
-            font-size: 20px;
-            color: #ffffff;
-            font-family: "Open Sans", sans-serif;
+            margin-top: 10%;
+            padding: 20px;
+        }
+        img {
+            height: 400px;
+            width: 400px;
+            object-fit: contain;
         }
     }
+
+    .section4 {
+        @extend .section3;
+        ul {
+            color: white;
+            font-family: "Open Sans", sans-serif;
+            font-size: 20px;
+            padding: 0 50px;
+            margin-top: 10%;
+        }
+    }
+
+    .section5 {
+        @include htext();
+    }
 }
+.anime {
+    animation-name: animetext;
+    animation-duration: 2s;
+}
+.layout {
+    animation-name: layout;
+    animation-duration: 3s;
+}
+@keyframes animetext {
+    from {
+        color: rgba(255, 255, 255, 0);
+        transform: translateY(200px);
+    }
+    to {
+        color: rgb(255, 255, 255);
+    }
+}
+
 @keyframes intro {
     from {
         color: rgba(255, 255, 255, 0);
@@ -78,5 +133,14 @@
     }
     to {
         color: rgb(255, 255, 255);
+    }
+}
+
+@keyframes layout {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
