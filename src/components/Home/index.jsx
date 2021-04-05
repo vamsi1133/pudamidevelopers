@@ -89,7 +89,7 @@ const Home = () => {
                 <section className={Classes.section5}>
                     <div ref={sec5}>
                         <h3>Layout Plan Copy</h3>
-                        <img width="100%" height="768px" className={addSec5 && Classes.layout} src="https://pudamidevelopers.com/wp-content/uploads/2019/05/0001-1.jpg" />
+                        <img width="75%" height="600px" className={addSec5 && Classes.layout} src="https://pudamidevelopers.com/wp-content/uploads/2019/05/0001-1.jpg" />
                     </div>
                 </section>
             </div>
