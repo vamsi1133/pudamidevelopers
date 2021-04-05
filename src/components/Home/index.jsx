@@ -54,11 +54,11 @@ const Home = () => {
                 </section>
 
                 <section className={Classes.section3}>
-                    <div ref={sec3} className={addSec3 && Classes.anime}>
-                        <h3>Venture Highlights</h3>
+                    <div ref={sec3}>
+                        <h3 className={addSec3 && Classes.anime}>Venture Highlights</h3>
                         <div className={Classes.Ven}>
-                            <img src='./demo.jpg' />
-                            <p >
+                            <img src='./demo.jpg' className={addSec3 && Classes.anime} />
+                            <p className={addSec3 && Classes.anime}>
                                 In the fastest growing cities of Rajamahendravaram a city having decades of great
                                 history, The Dewan pond, nearest areas of Rajanagaram and National highway-16,
                                 airport areas near to educational hub is a developing new mega project.
@@ -68,10 +68,10 @@ const Home = () => {
                 </section>
 
                 <section className={Classes.section4}>
-                    <div className={addSec4 && Classes.anime}>
-                        <h3 ref={sec4}>Venture Developments</h3>
+                    <div >
+                        <h3 ref={sec4} className={addSec4 && Classes.anime}>Venture Developments</h3>
                         <div className={Classes.Ven}>
-                            <ul>
+                            <ul className={addSec4 && Classes.anime}>
                                 <li>GUDA layout</li>
                                 <li>100% vastu and clear title</li>
                                 <li>40 feet black top-up road</li>
@@ -81,7 +81,7 @@ const Home = () => {
                                 <li>Concept oriented park, and avenue plantation on both sides of the road</li>
                                 <li>Spot registration along with bank loan facility.</li>
                             </ul>
-                            <img src='./demo.jpg' />
+                            <img src='./demo.jpg' className={addSec4 && Classes.anime} />
                         </div>
                     </div>
                 </section>
