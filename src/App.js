@@ -1,6 +1,5 @@
-import logo from './logo.svg';
-import './App.scss';
-import Home from './components/Home';
+import './App.css';
+import Home from './Home';
 
 function App() {
   return (
